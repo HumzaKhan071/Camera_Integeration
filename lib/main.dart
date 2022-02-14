@@ -31,7 +31,7 @@ class HomPage extends StatefulWidget {
 }
 
 class _HomPageState extends State<HomPage> {
-  late File _image;
+   File? _image;
   final imagePicker = ImagePicker();
 
   Future getImage() async {
@@ -46,7 +46,7 @@ class _HomPageState extends State<HomPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: _image == null ? Text("No Image Selected") : Image.file(_image),
+        child: _image == null ? Text("No Image Selected") : Image.file(_image!),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blue,
